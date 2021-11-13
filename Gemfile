@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 # Use HAML for templates.
 gem 'haml-rails'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'modernizr-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
