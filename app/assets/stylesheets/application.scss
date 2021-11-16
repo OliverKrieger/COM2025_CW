@@ -16,6 +16,17 @@
 
  @import "colours.scss";
 
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:$primary-text;
+	background:$primary-dark;
+    height: 100vh;
+}
+
  nav{
     background-color:$primary;
     img{
@@ -27,7 +38,7 @@
       align-items: center;
       height: 100%;
       a{
-        padding: 2%;
+        padding: 1% 2%;
         text-decoration: none;
         text-transform: uppercase;
         color: $primary-text;
@@ -35,9 +46,18 @@
         -o-transition: all .2s ease-in;
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
+        border-bottom: 2px solid rgba($color: #000000, $alpha: 0);
         &:hover{
             color: $secondary;
+            border-bottom: 2px solid rgba($color: $secondary, $alpha: 1);
         }
       }
     }
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
   }
