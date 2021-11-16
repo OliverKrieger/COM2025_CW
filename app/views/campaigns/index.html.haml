@@ -17,9 +17,15 @@
             %tr
               %td= campaign.name
               %td= campaign.desc
-              %td= link_to 'Show', campaign
-              %td= link_to 'Edit', edit_campaign_path(campaign)
-              %td= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' }
+              %td
+                .button.small_btn
+                  = link_to 'Show', campaign
+              %td
+                .button.small_btn
+                  = link_to 'Edit', edit_campaign_path(campaign)
+              %td
+                .button.small_btn
+                  = link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' }
 
       %br
       
