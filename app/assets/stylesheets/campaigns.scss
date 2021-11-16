@@ -1,0 +1,23 @@
+// Place all the styles related to the Campaigns controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colours.scss";
+
+.campaigns_wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    .list_inner{
+        background: $primary-text;
+        color: $secondary-text;
+        padding: 5%;
+        text-align: center;
+        h1{
+            color: $secondary;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+    }
+}
