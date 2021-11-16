@@ -31,6 +31,7 @@ body {
     background-color:$primary;
     img{
       height:100px;
+      filter: invert(1);
     }
     .links{
       display: flex;
@@ -47,6 +48,8 @@ body {
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
         border-bottom: 2px solid rgba($color: #000000, $alpha: 0);
+        font-weight: bold;
+        letter-spacing: 3px;
         &:hover{
             color: $secondary;
             border-bottom: 2px solid rgba($color: $secondary, $alpha: 1);
@@ -61,3 +64,4 @@ body {
     text-align: center;
     width: 100%;
   }
+
