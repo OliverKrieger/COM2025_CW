@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "colours.scss";
+
+ nav{
+    background-color:$primary;
+    img{
+      height:100px;
+    }
+    .links{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      a{
+        padding: 2%;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $primary-text;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        &:hover{
+            color: $secondary;
+        }
+      }
+    }
+  }
