@@ -8,9 +8,9 @@
             .card
               .content
                 %h3= item.name
-                %button show
-                %button edit
-                %button destroy
+                = link_to 'Show', item
+                = link_to 'Edit', edit_campaign_path(item)
+                = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
 
     .list_inner
       %h1 Listing campaigns
