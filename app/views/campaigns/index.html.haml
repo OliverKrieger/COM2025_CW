@@ -1,5 +1,17 @@
 .campaigns_wrapper
   .container
+
+    - @campaigns.in_groups_of(3, false).each do |group|
+      .row.row-cols-3.card_row
+        - group.each do |item|
+          .col
+            .card
+              .content
+                %h3= item.name
+                %button show
+                %button edit
+                %button destroy
+
     .list_inner
       %h1 Listing campaigns
 
