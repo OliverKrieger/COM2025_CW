@@ -1,0 +1,13 @@
+.contact_form
+    .container
+        %form#contact{:method => "post"}
+            %h3 Quick Contact
+            %h4 Contact us today, and get reply with in 24 hours!
+            %fieldset
+            %input{:placeholder => "Your name", :tabindex => "1", :type => "text"}
+            %fieldset
+            %input{:placeholder => "Your Email Address", :tabindex => "2", :type => "email"}
+            %fieldset
+            %textarea{:placeholder => "Type your Message Here....", :tabindex => "5"}
+            %fieldset
+            %button#contact-submit{"data-submit" => "...Sending", :name => "submit", :type => "submit"} Submit
