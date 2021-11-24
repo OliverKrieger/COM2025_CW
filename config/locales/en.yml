@@ -30,6 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+
+  app_title: "DnD Notes"
+  app_description: "A place where you an upload your D&D creations"
+
   contact:
     contact:
       title: Contact Us
