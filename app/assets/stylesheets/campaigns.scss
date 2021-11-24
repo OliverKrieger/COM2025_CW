@@ -30,26 +30,56 @@
 }
 
 .card {
-    position: relative;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    background: $secondary;
-    &:after{
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-    button{
-      display: block;
-      margin: 5px auto;
-    }
-    .content {
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      width: 100%;
-    }
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  background: $primary-dark;
+  border: solid 2px $secondary-light;
+  &:after{
+    content: "";
+    display: block;
+    padding-bottom: 150%;
   }
+  button{
+    display: block;
+    margin: 5px auto;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
+  .edit_btns{
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.card_btn{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 0 2%;
+  color: $primary-text;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  &:hover{
+    color: $secondary !important;
+  }
+  &:visited{
+    color: $primary-text;
+  }
+}
+
+.add_camp{
+  text-align: center;
+  padding: 2% 0 5% 0;
+}
   
   

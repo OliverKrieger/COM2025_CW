@@ -8,38 +8,11 @@
             .card
               .content
                 %h3= item.name
-                = link_to 'Show', item
-                = link_to 'Edit', edit_campaign_path(item)
-                = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
-
-    .list_inner
-      %h1 Listing campaigns
-
-      %table
-        %thead
-          %tr
-            %th Name
-            %th Desc
-            %th
-            %th
-            %th
-
-        %tbody
-          - @campaigns.each do |campaign|
-            %tr
-              %td= campaign.name
-              %td= campaign.desc
-              %td
-                .button.small_btn
-                  = link_to 'Show', campaign
-              %td
-                .button.small_btn
-                  = link_to 'Edit', edit_campaign_path(campaign)
-              %td
-                .button.small_btn
-                  = link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' }
-
-      %br
-      
+                %span= item.desc
+              .edit_btns
+                = link_to 'Show', item, class: "card_btn"
+                = link_to 'Edit', edit_campaign_path(item), class: "card_btn"
+                = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
+    .add_camp  
       .button
         = link_to 'New Campaign', new_campaign_path
