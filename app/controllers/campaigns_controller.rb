@@ -1,5 +1,6 @@
 class CampaignsController < ApplicationController
   before_action :set_campaign, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /campaigns or /campaigns.json
   def index
