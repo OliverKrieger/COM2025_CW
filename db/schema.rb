@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_11_25_202440) do
 
   create_table "campaigns", force: :cascade do |t|
-    t.string "name"
+    t.string "name", unique: true
     t.string "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

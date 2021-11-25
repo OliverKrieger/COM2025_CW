@@ -1,5 +1,6 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: %i[ show edit update destroy ]
+  before_action :set_campaign, only: [:new, :create]
 
   # GET /characters or /characters.json
   def index
@@ -12,7 +13,7 @@ class CharactersController < ApplicationController
 
   # GET /characters/new
   def new
-    @character = Character.new
+    @character = @campaign.characters.new
   end
 
   # GET /characters/1/edit
@@ -21,7 +22,7 @@ class CharactersController < ApplicationController
 
   # POST /characters or /characters.json
   def create
-    @character = Character.new(character_params)
+    @character = @campaign.characters.new(character_params)
 
     respond_to do |format|
       if @character.save
@@ -65,5 +66,9 @@ class CharactersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def character_params
       params.require(:character).permit(:campaign_id, :name, :desc)
+    end
+
+    def set_campaign
+      @campaign = Campaign.find_by(id: params[:campaign_id]) || Campaign.find(character_params[:campaign_id])
     end
 end

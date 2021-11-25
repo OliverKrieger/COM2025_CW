@@ -13,7 +13,7 @@
   %tbody
     - @characters.each do |character|
       %tr
-        %td= character.campaign
+        %td= character.campaign.name
         %td= character.name
         %td= character.desc
         %td= link_to 'Show', character

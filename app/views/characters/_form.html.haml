@@ -8,7 +8,8 @@
 
   .field
     = f.label :campaign
-    = f.text_field :campaign
+    %p=@character.campaign.name
+    = f.hidden_field :campaign_id, value: @character.campaign.id
   .field
     = f.label :name
     = f.text_field :name
