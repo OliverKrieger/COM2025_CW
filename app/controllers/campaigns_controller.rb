@@ -4,7 +4,7 @@ class CampaignsController < ApplicationController
 
   # GET /campaigns or /campaigns.json
   def index
-    @campaigns = Campaign.all
+    @campaigns = Campaign.user_campaigns(current_user)
   end
 
   # GET /campaigns/1 or /campaigns/1.json
@@ -23,6 +23,7 @@ class CampaignsController < ApplicationController
   # POST /campaigns or /campaigns.json
   def create
     @campaign = Campaign.new(campaign_params)
+    @campaign.user = current_user
 
     respond_to do |format|
       if @campaign.save
