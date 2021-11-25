@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ContactControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+  
   test "should get contact" do
     get contact_url
     assert_response :success
