@@ -1,15 +1,17 @@
-%p#notice= notice
+-# %p#notice= notice
 
-%p
-  %b Campaign:
-  = @character.campaign.name
-%p
-  %b Name:
-  = @character.name
-%p
-  %b Desc:
-  = @character.desc
+.characters_wrapper
+  .banner_wrapper
+    .banner_inner
+      %h1= @character.campaign.name
 
-= link_to 'Edit', edit_character_path(@character)
-\|
-= link_to 'Back', campaigns_path
+  .container
+    .description 
+      %h2= @character.name
+      %p= @character.desc
+
+  .add_btn_container 
+    .btn_small
+      = link_to 'Edit', edit_character_path(@character)
+      \|
+      = link_to 'Back', campaigns_path
