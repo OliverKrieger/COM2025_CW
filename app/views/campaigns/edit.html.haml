@@ -1,7 +1,9 @@
-%h1 Editing campaign
-
-= render 'form'
-
-= link_to 'Show', @campaign
-\|
-= link_to 'Back', campaigns_path
+.form_wrapper
+    .form_inner
+        %h1 Editing campaign
+        = render 'form'
+        .btn_small
+            = link_to 'Show', @campaign
+            \|
+            = link_to 'Back', campaigns_path
+        
