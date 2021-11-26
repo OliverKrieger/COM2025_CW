@@ -10,10 +10,10 @@ class CharactersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_character_url
-    assert_response :success
-  end
+  # test "should get new" do
+  #   get new_character_url
+  #   assert_response :success
+  # end
 
   test "should create character" do
     assert_difference('Character.count') do
