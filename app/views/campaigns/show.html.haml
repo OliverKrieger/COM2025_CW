@@ -1,14 +1,24 @@
-%p#notice= notice
+.banner_wrapper
+  .campaigns_banner
+    -# %p#notice= notice
+    %h1= @campaign.name
+    .btn_small
+      = link_to 'Edit', edit_campaign_path(@campaign)
+      \|
+      = link_to 'Back', campaigns_path
 
-%p
-  %b Name:
-  = @campaign.name
-%p
-  %b Desc:
-  = @campaign.desc
+.container
+  .description 
+    %p= @campaign.desc
 
 .character_listing_wrapper
   .container
+
+    .add_btn_container 
+      .add_btn_row
+        .button
+          = link_to 'Add Character', new_character_path(campaign_id: @campaign)
+
     - @campaign.characters.in_groups_of(4, false).each do |group|
       .row.row-cols-4.card_row
         - group.each do |item|
@@ -21,16 +31,6 @@
                 = link_to 'Show', item, class: "card_btn"
                 = link_to 'Edit', edit_character_path(item), class: "card_btn"
                 = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
-
-    .add_btn_container 
-      .add_btn_row
-        .button
-          = link_to 'Add Character', new_character_path(campaign_id: @campaign)
-
-      .btn_small
-        = link_to 'Edit', edit_campaign_path(@campaign)
-        \|
-        = link_to 'Back', campaigns_path
 
 -# %p Characters:
 -# %table
