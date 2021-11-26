@@ -7,20 +7,42 @@
   %b Desc:
   = @campaign.desc
 
-%p Tasks:
-%table
-  %tbody
-    - @campaign.characters.each do |character|
-      %tr
-        %td= character.campaign.name
-        %td= character.name
-        %td= character.desc
-        %td= link_to 'Show', character
-        %td= link_to 'Edit', edit_character_path(character)
-        %td= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' }
+.character_listing_wrapper
+  .container
+    - @campaign.characters.in_groups_of(4, false).each do |group|
+      .row.row-cols-4.card_row
+        - group.each do |item|
+          .col
+            .card
+              .content
+                %h3= item.name
+                %span= item.desc
+              .edit_btns
+                = link_to 'Show', item, class: "card_btn"
+                = link_to 'Edit', edit_character_path(item), class: "card_btn"
+                = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
 
-%p= link_to 'Add Character', new_character_path(campaign_id: @campaign)
+    .add_btn_container 
+      .add_btn_row
+        .button
+          = link_to 'Add Character', new_character_path(campaign_id: @campaign)
 
-= link_to 'Edit', edit_campaign_path(@campaign)
-\|
-= link_to 'Back', campaigns_path
+      .btn_small
+        = link_to 'Edit', edit_campaign_path(@campaign)
+        \|
+        = link_to 'Back', campaigns_path
+
+-# %p Characters:
+-# %table
+-#   %tbody
+-#     - @campaign.characters.each do |character|
+-#       %tr
+-#         %td= character.campaign.name
+-#         %td= character.name
+-#         %td= character.desc
+-#         %td= link_to 'Show', character
+-#         %td= link_to 'Edit', edit_character_path(character)
+-#         %td= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' }
+
+
+

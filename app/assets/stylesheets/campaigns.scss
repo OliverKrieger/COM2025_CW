@@ -82,6 +82,18 @@
   }
 }
 
+.character_listing_wrapper{
+  .card_row{
+    padding: 5% 0;
+  }
+  h3{
+    font-size: 2vh;
+  }
+  .card_btn{
+    font-size: 1vh;
+  }
+}
+
 
 .card_btn{
   text-decoration: none;
@@ -105,9 +117,12 @@
 }
 
 
-.add_camp{
+.add_btn_container{
   text-align: center;
   padding: 2% 0 5% 0;
+  .add_btn_row{
+    padding: 0 0 5% 0;
+  }
 }
   
   

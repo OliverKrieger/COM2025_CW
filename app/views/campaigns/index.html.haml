@@ -13,6 +13,6 @@
                 = link_to 'Show', item, class: "card_btn"
                 = link_to 'Edit', edit_campaign_path(item), class: "card_btn"
                 = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
-    .add_camp  
+    .add_btn_container
       .button
         = link_to 'New Campaign', new_campaign_path
