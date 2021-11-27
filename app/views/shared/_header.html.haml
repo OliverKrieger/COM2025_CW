@@ -23,5 +23,7 @@
                 .button
                   = link_to t('logout'), destroy_user_session_path, method: 'delete'
               - else
-                = link_to t('login'), new_user_session_path
-                = link_to t('sign_up'), new_user_registration_path
+                .button
+                  = link_to t('login'), new_user_session_path
+                .button
+                  = link_to t('sign_up'), new_user_registration_path
