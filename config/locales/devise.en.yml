@@ -3,6 +3,8 @@
 en:
   profile: "profile"
   logout: "log out"
+  login: "login"
+  sign_up: "sign up"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
