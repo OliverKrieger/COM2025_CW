@@ -232,3 +232,44 @@ input.submit-btn{
     }
   }
 }
+
+
+a.animated-button{
+  &.left-slide{
+    color: $primary-text;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 2px solid $secondary;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    &:hover{
+      color: #000 !important;
+      background-color: transparent;
+      &::before{
+        left: 0%;
+        right: auto;
+        width: 100%;
+      }
+    }
+    &:before{
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 100%;
+      width: 0px;
+      z-index: -1;
+      content: '';
+      color: $secondary-text !important;
+      background: $secondary;
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    &.medium-width{
+      max-width: 250px;
+      margin: auto;
+    }
+  }
+}
