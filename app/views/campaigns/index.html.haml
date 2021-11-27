@@ -2,9 +2,9 @@
   .container
 
     - @campaigns.in_groups_of(3, false).each do |group|
-      .row.row-cols-3.card_row
+      .row.card_row
         - group.each do |item|
-          .col
+          .col-lg-4.col-md-6.col-sm-6.col-xs-12
             .card
               .content
                 %h3= item.name

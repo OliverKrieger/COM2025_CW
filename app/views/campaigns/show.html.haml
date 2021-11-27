@@ -20,9 +20,9 @@
           = link_to 'Add Character', new_character_path(campaign_id: @campaign)
 
     - @campaign.characters.in_groups_of(4, false).each do |group|
-      .row.row-cols-4.card_row
+      .row.card_row
         - group.each do |item|
-          .col
+          .col-lg-3.col-md-6.col-sm-6.col-xs-12
             .card
               .content
                 %h3= item.name
