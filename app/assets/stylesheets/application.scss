@@ -206,6 +206,15 @@ input.submit-btn{
   }
 }
 
+.profile_wrapper{
+  .form_wrapper{
+    position: relative;
+    top: 0;
+    transform: none;
+    margin: 1% 0;
+  }
+}
+
 .login_links{
   .button{
     display: inline-block;
