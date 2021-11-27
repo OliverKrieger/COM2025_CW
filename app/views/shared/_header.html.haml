@@ -1,14 +1,3 @@
-%nav
-  - if user_signed_in?
-    = "#{current_user.email} |"
-    = link_to t('profile'), edit_user_registration_path
-    = '|'
-    = link_to t('logout'), destroy_user_session_path, method: 'delete'
-  - else
-    = link_to t('login'), new_user_session_path
-    = '|'
-    = link_to t('sign_up'), new_user_registration_path
-
 - flash.each do |key, value|
   = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
 
@@ -24,3 +13,13 @@
             %a{:href => "/contact"} contact
             %a{:href => "/campaigns"} library
             -# %a{:href => ""} characters
+            = '|'
+            .login_links
+              - if user_signed_in?
+                .username
+                  %span= "#{current_user.email}"
+                = link_to t('profile'), edit_user_registration_path
+                = link_to t('logout'), destroy_user_session_path, method: 'delete'
+              - else
+                = link_to t('login'), new_user_session_path
+                = link_to t('sign_up'), new_user_registration_path

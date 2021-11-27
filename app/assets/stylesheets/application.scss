@@ -205,3 +205,23 @@ input.submit-btn{
     }
   }
 }
+
+.login_links{
+  background: $primary-light;
+  text-align: center;
+  padding: 0 5%;
+  .username{
+    span{
+      display: block;
+      font-weight: bold;
+      font-size: 1vh;
+    }
+  }
+  a{
+    display: block;
+    line-height: initial;
+    padding: 0% 2%;
+    max-width: 100px;
+    margin: auto;
+  }
+}
