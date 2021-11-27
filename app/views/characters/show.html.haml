@@ -14,4 +14,4 @@
     .btn_small
       = link_to 'Edit', edit_character_path(@character)
       \|
-      = link_to 'Back', campaigns_path
+      = link_to 'Back', campaign_path(@character.campaign)

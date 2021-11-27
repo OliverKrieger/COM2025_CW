@@ -207,21 +207,19 @@ input.submit-btn{
 }
 
 .login_links{
-  background: $primary-light;
-  text-align: center;
-  padding: 0 5%;
-  .username{
-    span{
-      display: block;
-      font-weight: bold;
-      font-size: 1vh;
+  .button{
+    display: inline-block;
+    padding: 1% 0;
+    a{
+      border: none;
+      padding: 5px 0;
+      &:hover{
+        border: none;
+      }
+      span{
+        padding: 2px;
+        margin: 2px;
+      }
     }
-  }
-  a{
-    display: block;
-    line-height: initial;
-    padding: 0% 2%;
-    max-width: 100px;
-    margin: auto;
   }
 }
