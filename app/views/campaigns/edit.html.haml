@@ -1,9 +1,1 @@
-.form_wrapper
-    .form_inner
-        %h1 Editing campaign
-        = render 'form'
-        .btn_small
-            = link_to 'Show', @campaign
-            \|
-            = link_to 'Back', campaigns_path
-        
+=render 'shared/edit_form', form_title: "Editing campaign", form_name: "form", link_show: @campaign, link_back: campaigns_path
