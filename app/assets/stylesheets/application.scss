@@ -279,3 +279,26 @@ a.animated-button{
     padding-top: 5%;
   }
 }
+
+#alert, #notice{
+  background: $primary;
+    max-width: 250px;
+    padding: 1% 2%;
+    margin-left: 1%;
+    position: fixed;
+    z-index: 1000;
+    top: 5%;
+    left: 1%;
+    box-shadow: 5px 5px 20px #111;
+    p{
+      margin-bottom: 0;
+    }
+}
+
+#alert{
+  border-left: 2px solid;
+}
+
+#notice{
+  border-left: 2px solid green;
+}
