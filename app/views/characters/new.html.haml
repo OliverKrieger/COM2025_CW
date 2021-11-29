@@ -1,5 +1,1 @@
-%h1 New character
-
-= render 'form'
-
-= link_to 'Back', characters_path
+=render 'shared/shared_form', form_title: "New character", form_name: "form", form_links: "shared/new_links", ls:"", lb: campaign_path(@character.campaign)

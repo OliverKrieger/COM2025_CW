@@ -1,0 +1,9 @@
+.form_wrapper
+    .form_inner
+        %h1= form_title
+        = render form_name
+        .btn_small
+            = render form_links, link_show: ls, link_back: lb
+            -# = link_to 'Show', link_show
+            -# \|
+            -# = link_to 'Back', link_back

@@ -1,1 +1,1 @@
-=render 'shared/edit_form', form_title: "Editing character", form_name: "form", link_show: @character, link_back: campaign_path(@character.campaign)
+=render 'shared/shared_form', form_title: "Editing character", form_name: "form", form_links: "shared/edit_links", ls: @character, lb: campaign_path(@character.campaign)
