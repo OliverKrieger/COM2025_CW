@@ -282,17 +282,17 @@ a.animated-button{
 
 #alert, #notice{
   background: $primary;
-    max-width: 250px;
-    padding: 1% 2%;
-    margin-left: 1%;
-    position: fixed;
-    z-index: 1000;
-    top: 5%;
-    left: 1%;
-    box-shadow: 5px 5px 20px #111;
-    p{
-      margin-bottom: 0;
-    }
+  max-width: 250px;
+  padding: 1% 2%;
+  margin-left: 1%;
+  position: fixed;
+  z-index: 1000;
+  top: 5%;
+  left: 1%;
+  box-shadow: 5px 5px 20px #111;
+  p{
+    margin-bottom: 0;
+  }
 }
 
 #alert{
@@ -304,16 +304,13 @@ a.animated-button{
 }
 
 #alert, #notice {
-  -webkit-animation: cssAnimation 5s forwards; 
-  animation: cssAnimation 5s forwards;
+  -moz-animation: 1s hideAnimation 5s forwards;
+  animation: 1s hideAnimation 5s forwards;
 }
-@keyframes cssAnimation {
+@keyframes hideAnimation {
   0%   {opacity: 1;}
-  90%  {opacity: 1;}
-  100% {opacity: 0;}
-}
-@-webkit-keyframes cssAnimation {
-  0%   {opacity: 1;}
-  90%  {opacity: 1;}
-  100% {opacity: 0;}
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
