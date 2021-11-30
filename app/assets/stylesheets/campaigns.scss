@@ -137,6 +137,14 @@
   background-color: $primary-light;
   min-height: 200px;
   position: relative;
+  overflow: hidden;
+  img{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    left: 0;
+  }
   .banner_inner{
     position: absolute;
     top: 50%;

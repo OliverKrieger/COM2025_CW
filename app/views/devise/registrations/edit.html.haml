@@ -11,6 +11,8 @@
         - if devise_mapping.confirmable? && resource.pending_reconfirmation?
           %div
             Currently waiting confirmation for: #{resource.unconfirmed_email}
+        .field 
+          = f.file_field :avatar
         .field
           = f.label :password
           %i (leave blank if you don't want to change it)

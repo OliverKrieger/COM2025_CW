@@ -1,4 +1,6 @@
 .banner_wrapper
+  - if @campaign.image.attached?
+    = image_tag @campaign.image
   .banner_inner
     -# %p#notice= notice
     %h1= @campaign.name
