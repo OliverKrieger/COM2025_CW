@@ -6,6 +6,8 @@
         - group.each do |item|
           .col-lg-4.col-md-6.col-sm-6.col-xs-12
             .card
+              - if item.image.attached?
+                = image_tag item.image
               .content
                 %h3= item.name
                 %span= item.desc
