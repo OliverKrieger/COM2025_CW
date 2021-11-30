@@ -2,11 +2,16 @@
 
 .characters_wrapper
   .banner_wrapper
+    - if @character.campaign.image.attached?
+      = image_tag @character.campaign.image
     .banner_inner
       %h1= @character.campaign.name
 
   .container
     .description 
+      - if @character.image.attached?
+        .image_wrapper
+          = image_tag @character.image
       %h2= @character.name
       %p= @character.desc
 
