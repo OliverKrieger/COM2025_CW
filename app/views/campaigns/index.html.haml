@@ -5,18 +5,24 @@
       .row.card_row
         - group.each do |item|
           .col-lg-4.col-md-6.col-sm-6.col-xs-12
-            = link_to (item) do
+            .card_outer
+              .card_icons
+                .i_wrap
+                  %i.bi.bi-file-earmark-x-fill
+                .i_wrap
+                  %i.bi.bi-pencil-fill
               .card
-                - if item.image.attached?
-                  = image_tag item.image
-                  .card_overlay
-                .content
-                  %h3= item.name
-                  %span= item.desc
-                .edit_btns
-                  -# = link_to 'Show', item, class: "card_btn"
-                  = link_to 'Edit', edit_campaign_path(item), class: "card_btn"
-                  = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
+                = link_to (item) do
+                  - if item.image.attached?
+                    = image_tag item.image
+                    .card_overlay
+                  .content
+                    %h3= item.name
+                    %span= item.desc
+                  .edit_btns
+                    -# = link_to 'Show', item, class: "card_btn"
+                    = link_to 'Edit', edit_campaign_path(item), class: "card_btn"
+                    = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
     .add_btn_container
       .button
         = link_to 'New Campaign', new_campaign_path

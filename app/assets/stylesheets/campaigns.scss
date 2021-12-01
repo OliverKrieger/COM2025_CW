@@ -125,6 +125,34 @@ $cardoffset:40px;
   }
 }
 
+.card_outer{
+  position: relative;
+  .card_icons{
+    position: absolute;
+    z-index: 1;
+    right: 4%;
+    top: -8%;
+    .i_wrap{
+      background: $primary;
+      color: $secondary;
+      display: block;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10%;
+      position: relative;
+      i{
+        font-size: 2em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+
 
 @keyframes unhidden {
   0%   { 
