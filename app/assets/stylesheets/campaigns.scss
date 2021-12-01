@@ -116,7 +116,6 @@ $cardoffset:40px;
     }
     .content{
       span{
-        
         -moz-animation: unhidden 1s forwards;
         animation: unhidden 1s forwards;
         transform: translateY(0);
@@ -133,7 +132,7 @@ $cardoffset:40px;
     right: 4%;
     top: -8%;
     .i_wrap{
-      background: $primary;
+      background: $primary-dark;
       color: $secondary;
       display: block;
       border-radius: 50%;
@@ -141,12 +140,25 @@ $cardoffset:40px;
       height: 64px;
       margin-bottom: 10%;
       position: relative;
+      border: 2px solid $secondary-light;
       i{
         font-size: 2em;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.card_outer{
+  .i_wrap{
+    transition: all .2s ease-in-out;
+    &:hover{
+      background: $secondary-light;
+      i{
+        color: $secondary-text;
       }
     }
   }

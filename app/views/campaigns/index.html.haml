@@ -7,10 +7,11 @@
           .col-lg-4.col-md-6.col-sm-6.col-xs-12
             .card_outer
               .card_icons
+                = link_to (edit_campaign_path(item)) do
+                  .i_wrap
+                    %i.bi.bi-pencil-fill
                 .i_wrap
                   %i.bi.bi-file-earmark-x-fill
-                .i_wrap
-                  %i.bi.bi-pencil-fill
               .card
                 = link_to (item) do
                   - if item.image.attached?
@@ -21,7 +22,7 @@
                     %span= item.desc
                   .edit_btns
                     -# = link_to 'Show', item, class: "card_btn"
-                    = link_to 'Edit', edit_campaign_path(item), class: "card_btn"
+                    -# = link_to 'Edit', edit_campaign_path(item), class: "card_btn"
                     = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
     .add_btn_container
       .button
