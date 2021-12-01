@@ -29,6 +29,7 @@
     }
 }
 
+$cardoffset:40px;
 .card {
   position: relative;
   width: 75%;
@@ -84,6 +85,8 @@
             line-clamp: 2; 
     -webkit-box-orient: vertical;
     padding: 0 4%;
+    transform: translateY($cardoffset);
+    transition: all .6s ease-in-out;
   }
   span{
     overflow: hidden;
@@ -95,16 +98,39 @@
     padding: 0 4%;
     font-style: italic;
     color: $primary-text;
+    visibility: hidden;
   }
 }
 
 .card{
   &:hover{
     cursor: pointer;
+    h3{
+      transform: translateY(0);
+    }
     img{
       transition: all .2s ease-in-out;
       filter: none;
     }
+    .content{
+      span{
+        visibility: visible;
+        -moz-animation: top-slide 1s forwards;
+        animation: top-slide 1s forwards;
+      }
+    }
+  }
+}
+
+
+@keyframes top-slide {
+  0%   { 
+    opacity:0;
+    transform: translateY($cardoffset); 
+  }
+  100%  { 
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
