@@ -99,6 +99,8 @@ $cardoffset:40px;
     font-style: italic;
     color: $primary-text;
     visibility: hidden;
+    transition: all .6s ease-in-out;
+    transform: translateY($cardoffset);
   }
 }
 
@@ -114,23 +116,24 @@ $cardoffset:40px;
     }
     .content{
       span{
-        visibility: visible;
-        -moz-animation: top-slide 1s forwards;
-        animation: top-slide 1s forwards;
+        
+        -moz-animation: unhidden 1s forwards;
+        animation: unhidden 1s forwards;
+        transform: translateY(0);
       }
     }
   }
 }
 
 
-@keyframes top-slide {
+@keyframes unhidden {
   0%   { 
+    visibility: hidden;
     opacity:0;
-    transform: translateY($cardoffset); 
   }
   100%  { 
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
   }
 }
 
