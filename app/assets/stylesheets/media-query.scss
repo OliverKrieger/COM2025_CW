@@ -1,0 +1,39 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) { 
+    .header_links{
+        text-align: center;
+        .links{
+            display: block;
+            width: 100%;
+            a{
+                display: block;
+            }
+        }
+    }
+    .logo{
+        text-align: center;
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) { 
+
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) { 
+
+ }

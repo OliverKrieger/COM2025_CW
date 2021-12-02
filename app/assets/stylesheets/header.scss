@@ -1,0 +1,74 @@
+.burg-menu {
+    display: inline-block;
+    width: 42px;
+    height: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    right: 16px;
+    top: 3px;
+    color: #fff;
+    z-index: 111111;
+    position: absolute;
+  }
+  .burg-menu i {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 3px;
+    color:#252525;
+    font:bold 14px/.4 Helvetica;
+    text-transform: uppercase;
+    text-indent:-55px;
+    background: #252525;
+    transition:all .2s ease-out;
+    color:#fff;
+    background: #fff;
+  }
+  .burg-menu i::before, .burg-menu i::after {
+    content:'';
+    width: 18px;
+    height: 3px;
+    background: #252525;
+    position: absolute;
+    left:0;
+    transition:all .2s ease-out;
+    color:#fff;
+    background: #fff;
+  }
+  .burg-menu i::before {
+    top: -7px;
+  }
+  .burg-menu i::after {
+    bottom: -7px;
+  }
+  .burg-menu:hover i::before {
+    top: -10px;
+  }
+  .burg-menu:hover i::after {
+    bottom: -10px;
+  }
+  .burg-menu.active i {
+      background: #fff;
+  }
+  .burg-menu.active i::before {
+    top:0;
+    -webkit-transform: rotateZ(45deg);
+       -moz-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+         -o-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  .burg-menu.active i::after {
+    bottom:0;
+    -webkit-transform: rotateZ(-45deg);
+       -moz-transform: rotateZ(-45deg);
+        -ms-transform: rotateZ(-45deg);
+         -o-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+  }
+  
+  
+  
+  
+  

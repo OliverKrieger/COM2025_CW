@@ -15,7 +15,7 @@
  */
 
  @import "colours.scss";
-
+@import "header.scss";
 
 body {
 	font-family:"Open Sans", Helvetica, Arial, sans-serif;
@@ -328,3 +328,5 @@ a.animated-button{
     visibility: hidden;
   }
 }
+
+@import "media-query.scss";
