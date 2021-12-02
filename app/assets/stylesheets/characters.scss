@@ -4,6 +4,7 @@
 
 @import "colours.scss";
 
+$charCardOffset:100px;
 .characters_wrapper{
     .description {
         .image_wrapper{
@@ -41,6 +42,40 @@
             color: $secondary-very-light;
             font-size: 1.2em;
             line-height: inherit;
+        }
+    }
+}
+
+.character_listing_wrapper{
+    .card{
+        img{
+            top:40%;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid $secondary;
+            transition: all .6s ease-in-out;
+        }
+        h3{
+            transform:translateY($charCardOffset);
+        }
+        span{
+            transform:translateY($charCardOffset);
+        }
+    }
+}
+
+.character_listing_wrapper{
+    .card{
+        &:hover{
+            img{
+                top:22.5%;
+            }
+            h3{
+                transform:translateY(40px);
+            }
+            span{
+                transform:translateY(40px);
+            }
         }
     }
 }
