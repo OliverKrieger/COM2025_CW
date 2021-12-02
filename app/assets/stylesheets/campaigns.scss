@@ -50,6 +50,7 @@ $cardoffset:40px;
     transform: translate(-50%, -50%);
     height: 100%;
     filter: grayscale(100%);
+    transition: all .6s ease-in-out;
   }
   .card_overlay{
     position: absolute;
