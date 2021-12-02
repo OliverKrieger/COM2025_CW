@@ -185,14 +185,17 @@ input.submit-btn{
     input{
       width: 100%;
       border: 1px solid $primary;
-      background: #ffffff;
+      background: $primary-text;
       margin: 0 0 5px;
       padding: 10px;
+    }
+    input[type="file"] {
+      color: $secondary-text;
     }
     textarea{
       width: 100%;
       border: 1px solid #212121;
-      background: #ffffff;
+      background: $primary-text;
       margin: 0 0 5px;
       padding: 10px;
       min-height: 200px;
