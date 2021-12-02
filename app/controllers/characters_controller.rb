@@ -52,7 +52,7 @@ class CharactersController < ApplicationController
   def destroy
     @character.destroy
     respond_to do |format|
-      format.html { redirect_to characters_url, notice: "Character was successfully destroyed." }
+      format.html { redirect_to campaigns_url, notice: "Character was successfully destroyed." }
       format.json { head :no_content }
     end
   end
