@@ -43,6 +43,6 @@ class CharactersControllerTest < ActionDispatch::IntegrationTest
       delete character_url(@character)
     end
 
-    assert_redirected_to characters_url
+    assert_redirected_to campaigns_url
   end
 end
