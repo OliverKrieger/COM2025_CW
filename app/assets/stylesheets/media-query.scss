@@ -18,6 +18,13 @@
     }
     .header_links{
         text-align: center;
+        transform: translateX(992px);
+        max-height: 40px;
+        transition:all .2s ease-out;
+        &.active{
+            transform: translateX(0);
+            max-height: none;
+        }
         .links{
             display: block;
             width: 100%;

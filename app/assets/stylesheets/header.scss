@@ -1,6 +1,6 @@
 @import "colours.scss";
 
-.header_links{
+header{
   a{
     &:hover{
       background-color: $primary;
@@ -10,7 +10,7 @@
 
 .burg-menu {
   display: inline-block;
-  width: 42px;
+  width: 18px;
   height: 35px;
   cursor: pointer;
   text-decoration: none;
@@ -48,16 +48,6 @@
     }
     &::after{
       bottom: -7px;
-    }
-  }
-  &:hover{
-    i{
-      &::before{
-        top: -10px;
-      }
-      &::after{
-        bottom: -10px;
-      }
     }
   }
   &.active{

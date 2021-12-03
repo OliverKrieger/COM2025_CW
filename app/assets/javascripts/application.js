@@ -19,5 +19,13 @@
 $(document).ready(function(){
     $(".burg-menu").on("click", function(){
         $(this).toggleClass('active');
+        $(".header_links").toggleClass('active');
     });    
+});
+
+$(window).resize(function() {
+    if ($(window).width() > 992) {
+        $(".burg-menu").removeClass('active');
+        $(".header_links").removeClass('active');
+    }
 });
