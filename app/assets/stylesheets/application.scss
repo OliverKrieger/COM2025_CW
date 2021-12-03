@@ -62,8 +62,8 @@ nav{
     .login_links{
       img{
         border-radius: 50%;
-        max-width: 64px;
-        max-height: 64px;
+        max-width: 48px;
+        max-height: 48px;
         border: 2px solid $secondary;
         margin: 5px;
       }
@@ -240,6 +240,22 @@ input.submit-btn{
       letter-spacing: 0;
       &:hover{
         border: none;
+      }
+    }
+  }
+  .profile{
+    display: inline-block;
+    padding: 0;
+    border-bottom: none;
+    img{
+      transition: all .2s ease-in-out;
+    }
+    &:hover{
+      border-bottom: none;
+      filter: drop-shadow(0 0 6px $secondary-dark);
+      img{
+        border-radius: 50%;
+        border: 2px solid $secondary-light;
       }
     }
   }
