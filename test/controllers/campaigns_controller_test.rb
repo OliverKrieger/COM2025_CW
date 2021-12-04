@@ -21,7 +21,7 @@ class CampaignsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create campaign" do
     assert_difference('Campaign.count') do
-      post campaigns_url, params: { campaign: { desc: @campaign.desc, name: @campaign.name } }
+      post campaigns_url, params: { campaign: { desc: @campaign.desc, name: @campaign.name + "new" } }
     end
 
     assert_redirected_to campaign_url(Campaign.last)
