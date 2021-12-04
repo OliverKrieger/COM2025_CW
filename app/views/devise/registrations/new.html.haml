@@ -16,6 +16,7 @@
                 .field
                     = f.label :password_confirmation
                     = f.password_field :password_confirmation, autocomplete: "new-password"
-                .actions
+                .actions.button
                     = f.submit "Sign up"
-            = render "devise/shared/links"
+            .btn_small
+                = render "devise/shared/links"
