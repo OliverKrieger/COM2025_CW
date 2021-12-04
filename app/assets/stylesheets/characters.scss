@@ -47,6 +47,9 @@ $charCardOffset:100px;
 }
 
 .character_listing_wrapper{
+    .card_row{
+        padding-bottom: 5%;
+    }
     .card{
         img{
             top:40%;
