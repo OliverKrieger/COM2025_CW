@@ -177,7 +177,7 @@ input.submit-btn{
   transform: translate(0, -50%);
   width: 100%;
   text-align: center;
-  padding: 2%;
+  padding: 5%;
   .form_inner{
     max-width: 400px;
     width: 100%;
@@ -239,7 +239,9 @@ input.submit-btn{
     position: relative;
     top: 0;
     transform: none;
-    margin: 1% 0;
+  }
+  .btn_small{
+    padding-top: 5%;
   }
 }
 
