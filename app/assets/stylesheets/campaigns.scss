@@ -247,6 +247,8 @@ $cardoffset:40px;
     top: 50%;
     transform: translate(0, -50%);
     width: 100%;
+    background: linear-gradient(90deg, transparent, $primary, transparent);
+    padding: 1%;
     h1{
       text-transform: uppercase;
       letter-spacing: 4px;
