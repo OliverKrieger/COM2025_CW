@@ -5,7 +5,7 @@ header{
   width: 100%;
   top: 0;
   z-index: 11;
-  min-height: 10vh;
+  max-height: 10vh;
   a{
     &:hover{
       background-color: $primary;
@@ -15,7 +15,7 @@ header{
 
 .burg-menu {
   display: inline-block;
-  width: 18px;
+  width: 35px;
   height: 35px;
   cursor: pointer;
   text-decoration: none;
@@ -26,6 +26,7 @@ header{
   z-index: 111111;
   position: absolute;
   visibility: hidden;
+  text-align: center;
   i{
     position: relative;
     display: inline-block;

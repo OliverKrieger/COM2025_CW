@@ -16,16 +16,16 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
     $(".burg-menu").on("click", function(){
+        console.log("click");
         $(this).toggleClass('active');
-        $(".header_links").toggleClass('active');
-    });    
+        $(".header_links, nav").toggleClass('active');
+    });
 });
 
 $(window).resize(function() {
     if ($(window).width() > 992) {
-        $(".burg-menu").removeClass('active');
-        $(".header_links").removeClass('active');
+        $(".burg-menu, .header_links, nav").removeClass('active');
     }
 });

@@ -4,7 +4,7 @@
     - @campaigns.in_groups_of(3, false).each do |group|
       .row.card_row
         - group.each do |item|
-          .col-lg-4.col-md-6.col-sm-6.col-xs-12
+          .col-lg-4.col-md-6.col-sm-6.col-xs-12.card_col
             .card_outer
               .card_icons
                 = link_to (edit_campaign_path(item)) do

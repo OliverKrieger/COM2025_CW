@@ -29,8 +29,11 @@ body {
   position: relative;
 }
 
-nav{
+header{
   background-color:$primary;
+}
+
+nav{
   img{
     height:10vh;
   }
@@ -69,6 +72,9 @@ nav{
         margin: 5px;
       }
     }
+  }
+  &.active{
+    background-color: $primary;
   }
 }
 
