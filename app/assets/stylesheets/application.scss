@@ -231,6 +231,15 @@ input.submit-btn{
         }
       }
     }
+    .remember_me{
+      label{
+        display: inline-block;
+      }
+      input[type='checkbox']{
+        display: inline-block;
+        width: auto;
+      }
+    }
   }
 }
 
