@@ -32,6 +32,10 @@
 en:
 
   app_description: "A place where you an upload your D&D creations"
+  login_link: "Log In"
+  sign_up_link: "Sign Up"
+  log_out_link: "Log Out"
+  profile_link: "Profile"
 
   layouts:
     application:
@@ -59,3 +63,9 @@ en:
     request_contact:
       no_email: You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
+
+  shared:
+    header:
+      home_link: "Home"
+      contact_link: "Contact"
+      library_link: "Library"

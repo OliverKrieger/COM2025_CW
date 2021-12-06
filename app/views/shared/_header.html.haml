@@ -11,27 +11,27 @@
           %img{:alt => "logo", :src => image_url("logo.png")}/
         .col-lg-6
           .links
-            %a{:href => "/"} home
-            %a{:href => "/contact"} contact
-            %a{:href => "/campaigns"} library
+            %a{:href => "/"}= t('.home_link')
+            %a{:href => "/contact"}= t('.contact_link')
+            %a{:href => "/campaigns"}= t('.library_link')
             -# %a{:href => ""} characters
             = '|'
             .login_links
               - if user_signed_in?
                 -# .username
                 -#   %span= "#{current_user.email}"
-                = link_to(edit_user_registration_path, class: "profile") do
-                  - if current_user.avatar.attached?
+                - if current_user.avatar.attached?
+                  = link_to(edit_user_registration_path, class: "profile") do
                     = image_tag current_user.avatar
-                  - else
-                    .button
-                      = link_to t('profile'), edit_user_registration_path
+                - else
+                  .button
+                    = link_to t('profile_link'), edit_user_registration_path
                 -# .button
                 -#   = link_to t('profile'), edit_user_registration_path
                 .button
-                  = link_to t('logout'), destroy_user_session_path, method: 'delete'
+                  = link_to t('log_out_link'), destroy_user_session_path, method: 'delete'
               - else
                 .button
-                  = link_to t('login'), new_user_session_path
+                  = link_to t('login_link'), new_user_session_path
                 .button
-                  = link_to t('sign_up'), new_user_registration_path
+                  = link_to t('sign_up_link'), new_user_registration_path
