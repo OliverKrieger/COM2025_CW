@@ -17,6 +17,6 @@
 
   .add_btn_container 
     .btn_small
-      = link_to 'Edit', edit_character_path(@character)
+      = link_to t('.char_edit_link'), edit_character_path(@character)
       \|
-      = link_to 'Back', campaign_path(@character.campaign)
+      = link_to t('.char_back_link'), campaign_path(@character.campaign)

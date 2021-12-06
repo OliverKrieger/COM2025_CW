@@ -5,9 +5,9 @@
     -# %p#notice= notice
     %h1= @campaign.name
     .btn_small
-      = link_to 'Edit', edit_campaign_path(@campaign)
+      = link_to t('.camp_edit_link'), edit_campaign_path(@campaign)
       \|
-      = link_to 'Back', campaigns_path
+      = link_to t('.camp_back_link'), campaigns_path
 
 .container
   .description 
@@ -19,7 +19,7 @@
     .add_btn_container 
       .add_btn_row
         .button
-          = link_to 'Add Character', new_character_path(campaign_id: @campaign)
+          = link_to t('.camp_show_msg'), new_character_path(campaign_id: @campaign)
 
     - @campaign.characters.in_groups_of(4, false).each do |group|
       .row.card_row
@@ -30,7 +30,7 @@
                 = link_to (edit_character_path(item)) do
                   .i_wrap
                     %i.bi.bi-pencil-fill
-                = link_to (item), method: :delete, data: { confirm: 'Are you sure?' } do
+                = link_to (item), method: :delete, data: { confirm: t('.camp_destroy_confirm_msg') } do
                   .i_wrap
                     %i.bi.bi-file-earmark-x-fill
               .card
@@ -41,22 +41,5 @@
                   .content
                     %h3= item.name
                     %span= item.desc
-                  .edit_btns
-                    -# = link_to 'Show', item, class: "card_btn"
-                    -# = link_to 'Edit', edit_character_path(item), class: "card_btn"
-                    -# = link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "card_btn"
-
--# %p Characters:
--# %table
--#   %tbody
--#     - @campaign.characters.each do |character|
--#       %tr
--#         %td= character.campaign.name
--#         %td= character.name
--#         %td= character.desc
--#         %td= link_to 'Show', character
--#         %td= link_to 'Edit', edit_character_path(character)
--#         %td= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' }
-
 
 
