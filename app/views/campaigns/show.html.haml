@@ -2,7 +2,6 @@
   - if @campaign.image.attached?
     = image_tag @campaign.image
   .banner_inner
-    -# %p#notice= notice
     %h1= @campaign.name
     .btn_small
       = link_to t('.camp_edit_link'), edit_campaign_path(@campaign)
