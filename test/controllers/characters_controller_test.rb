@@ -23,23 +23,6 @@ class CharactersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to character_url(Character.last)
   end
 
-  test "should not save empty character" do
-    character = Character.new
-
-    character.save
-    refute character.valid?
-  end
-
-  test "should save valid character" do
-    character = Character.new
-
-    character.name = "Character Name"
-    character.desc = "Character Description"
-
-    character.save
-    assert character.valid?
-  end
-
   test "should show character" do
     get character_url(@character)
     assert_response :success
