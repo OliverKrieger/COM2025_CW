@@ -4,7 +4,8 @@ class CharactersController < ApplicationController
 
   # GET /characters or /characters.json
   def index
-    @characters = Character.all
+    # @characters = Character.all
+    redirect_to campaigns_url
   end
 
   # GET /characters/1 or /characters/1.json

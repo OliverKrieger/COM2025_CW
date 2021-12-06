@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :characters
   devise_for :users
   # Resources
   resources :campaigns
+  resources :characters
 
   # Contact Page
   get 'contact', to: 'contact#contact' #redirect
