@@ -35,8 +35,9 @@
                     %i.bi.bi-file-earmark-x-fill
               .card
                 = link_to (item) do
-                  - if item.image.attached?
-                    = image_tag item.image
+                  .img_wrapper
+                    - if item.image.attached?
+                      = image_tag item.image
                   .content
                     %h3= item.name
                     %span= item.desc

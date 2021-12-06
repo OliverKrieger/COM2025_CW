@@ -34,11 +34,14 @@ header{
 }
 
 nav{
+  .logo{
+    img{
+      padding:2vh;
+    }
+    
+  }
   img{
     height:10vh;
-  }
-  .logo{
-    filter: invert(1);
   }
   .links{
     display: flex;

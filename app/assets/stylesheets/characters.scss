@@ -51,18 +51,28 @@ $charCardOffset:100px;
         padding-bottom: 5%;
     }
     .card{
-        img{
-            top:40%;
+        .img_wrapper{
+            top: 40%;
             height: 64px;
+            width: 64px;
+            overflow: hidden;
             border-radius: 50%;
-            border: 2px solid $secondary;
+            border: 2px solid #ffcc80;
             transition: all .6s ease-in-out;
+            margin: 0 auto;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            position: absolute;
+            img{
+                position: relative;
+            }
         }
         h3{
             transform:translateY($charCardOffset);
         }
         span{
             transform:translateY($charCardOffset);
+            min-height: 90px;
         }
     }
 }
@@ -70,8 +80,8 @@ $charCardOffset:100px;
 .character_listing_wrapper{
     .card{
         &:hover{
-            img{
-                top:22.5%;
+            .img_wrapper{
+                top:25%;
             }
             h3{
                 transform:translateY(40px);
