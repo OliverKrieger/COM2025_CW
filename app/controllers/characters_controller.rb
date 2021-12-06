@@ -53,7 +53,8 @@ class CharactersController < ApplicationController
   def destroy
     @character.destroy
     respond_to do |format|
-      format.html { redirect_to campaigns_url, notice: t(".char_delete_msg") }
+      format.html { redirect_to campaigns_url, notice: t(".char_destroy_msg") }
+      format.js { flash[:notice] = t(".char_destroy_msg")}
       format.json { head :no_content }
     end
   end

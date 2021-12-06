@@ -44,6 +44,8 @@ en:
       camp_update_msg: "Campaign was successfully updated."
     destroy:
       camp_destroy_msg: "Campaign was successfully destroyed."
+      char_delete_msg: "Character was successfully destroyed."
+      char_destroy_confirm_msg: 'Are you sure?'
     index:
       camp_destroy_confirm_msg: 'Are you sure?'
       camp_new_msg: 'New Campaign'
@@ -66,6 +68,7 @@ en:
       char_update_msg: "Character was successfully updated."
     destroy:
       char_destroy_msg: "Character was successfully destroyed."
+      char_delete_msg: "Character was successfully destroyed."
     index:
       char_destroy_confirm_msg: 'Are you sure?'
       char_new_msg: 'New Character'

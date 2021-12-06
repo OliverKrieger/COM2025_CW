@@ -54,6 +54,7 @@ class CampaignsController < ApplicationController
     @campaign.destroy
     respond_to do |format|
       format.html { redirect_to campaigns_url, notice: t(".camp_destroy_msg") }
+      format.js { flash[:notice] = t(".camp_destroy_msg")}
       format.json { head :no_content }
     end
   end
