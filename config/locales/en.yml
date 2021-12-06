@@ -31,8 +31,16 @@
 
 en:
 
-  app_title: "DnD Notes"
   app_description: "A place where you an upload your D&D creations"
+
+  layouts:
+    application:
+      app_title: "D&D Notes"
+
+  home:
+    home:
+      app_banner_title: "Dungeons & Dragons"
+      app_banner_desc: "Character Management App"
 
   contact:
     contact:
