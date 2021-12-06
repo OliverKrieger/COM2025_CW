@@ -49,4 +49,10 @@ class CampaignsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to campaigns_url
   end
+
+  test 'not logged in user redirects to home from campaign' do
+    sign_out @user
+    get campaigns_url
+    assert_redirected_to new_user_session_url
+  end
 end

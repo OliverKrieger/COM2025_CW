@@ -8,4 +8,14 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test 'should redirect after login' do
+    user = User.new
+    user.email = 'bob@example.com'
+    user.password = '12345678'
+    user.save
+    sign_in user
+    post new_user_session_url
+    assert_redirected_to root_url 
+  end
+
 end

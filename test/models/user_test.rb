@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  include Devise::Test::IntegrationHelpers
   # test "the truth" do
   #   assert true
   # end
@@ -39,4 +40,5 @@ class UserTest < ActiveSupport::TestCase
     assert user.destroyed?
     refute_equal "Campaign New", Campaign.last.name
   end
+
 end
