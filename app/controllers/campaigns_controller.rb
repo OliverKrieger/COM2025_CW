@@ -27,7 +27,7 @@ class CampaignsController < ApplicationController
 
     respond_to do |format|
       if @campaign.save
-        format.html { redirect_to @campaign, notice: "Campaign was successfully created." }
+        format.html { redirect_to @campaign, notice: t(".camp_create_msg") }
         format.json { render :show, status: :created, location: @campaign }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class CampaignsController < ApplicationController
   def update
     respond_to do |format|
       if @campaign.update(campaign_params)
-        format.html { redirect_to @campaign, notice: "Campaign was successfully updated." }
+        format.html { redirect_to @campaign, notice: t(".camp_update_msg") }
         format.json { render :show, status: :ok, location: @campaign }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class CampaignsController < ApplicationController
   def destroy
     @campaign.destroy
     respond_to do |format|
-      format.html { redirect_to campaigns_url, notice: "Campaign was successfully destroyed." }
+      format.html { redirect_to campaigns_url, notice: t(".camp_destroy_msg") }
       format.json { head :no_content }
     end
   end

@@ -37,6 +37,22 @@ en:
   log_out_link: "Log Out"
   profile_link: "Profile"
 
+  campaigns:
+    create:
+      camp_create_msg: "Campaign was successfully created."
+    update:
+      camp_update_msg: "Campaign was successfully updated."
+    destroy:
+      camp_delete_msg: "Campaign was successfully destroyed."
+
+  characters:
+    create:
+      char_create_msg: "Character was successfully created."
+    update:
+      char_update_msg: "Character was successfully updated."
+    destroy:
+      char_delete_msg: "Character was successfully destroyed."
+
   layouts:
     application:
       app_title: "D&D Notes"
